@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Gabriel Cortes, UNIFEI, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+D:\Faculdade\2021.2\ELTD13\Projeto Final\Teclado_Musical.uvprojx
+Project File Date:  12/10/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+    ^
+1 warning generated.
+compiling system_stm32f10x.c...
+main.c(263): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         GPIOA -> BSRR = (( aux &0x0008 ) <<8) | (( aux &0x0004 ) <<3) | (( aux &0x0002 ) <<5) | (( aux &0x0001 ) <<8);
+                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+main.c(266): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+         GPIOA -> ODR &= ~ (1 << LCD_EN ); /* EN = 0 for H - to - L pulse */
+                      ~~ ^~~~~~~~~~~~~~~~
+main.c(271): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+         GPIOA -> BSRR = (( aux &0x0008 ) <<8) | (( aux &0x0004 ) <<3) | (( aux & 0x0002 ) <<5) | (( aux &0x0001 ) <<8);
+                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+main.c(274): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+         GPIOA -> ODR &= ~(1 << LCD_EN ); /* EN = 0 for H - to - L pulse */
+                      ~~ ^~~~~~~~~~~~~~~
+main.c(279): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+         GPIOA -> ODR &= ~ (1 << LCD_RS ); /* RS = 0 for command */
+                      ~~ ^~~~~~~~~~~~~~~~
+main.c(300): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+         GPIOA -> ODR &= ~(1 << LCD_EN ); /* LCD_EN = 0 */
+                      ~~ ^~~~~~~~~~~~~~~
+main.c(330): warning: no newline at end of file [-Wnewline-eof]
+ }
+  ^
+7 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=3876 RO-data=252 RW-data=0 ZI-data=1640  
+".\Objects\Teclado_Musical.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\ccper\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\ccper\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
